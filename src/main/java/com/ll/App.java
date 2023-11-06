@@ -10,7 +10,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         int 명언번호 = 1;
-
         List<Quotation> 명언모음 = new ArrayList<>();
 
         while (true) {
@@ -40,9 +39,12 @@ public class App {
                 for (int i = 0; i < 명언모음.size(); i++) {
                     Quotation 명언 = 명언모음.get(i);
                     System.out.printf("%d / %s / %s\n", 명언.명언번호, 명언.author, 명언.content);
-                }
-              }
+                  }
+            }else if (cmd.startsWith("삭제?id=")) {
+                int 삭제번호 = Integer.parseInt(cmd.substring(6));
+                System.out.printf("%d번 명언이 삭제되었습니다.\n",삭제번호);
             }
         }
     }
+}
 
