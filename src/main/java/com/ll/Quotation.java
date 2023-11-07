@@ -11,4 +11,7 @@ public class Quotation {
         this.content = content;
     }
 
+    public int get명언번호() {
+        return 명언번호;
+    }
 }
